@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NET - Njala Environmental Technicians</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('back.JPG') no-repeat center center fixed; /* Use the uploaded image */
+            background-size: cover; /* Ensure the image covers the entire background */
+            color: #ffffff; /* Ensure text is readable over the background */
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 140px);
+        }
+
+        #file-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        #file-list li {
+            background: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+            color: #000;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        #file-list li:hover {
+            transform: translateY(-10px); /* Lift effect on hover */
+        }
+
+        #file-list li a {
+            text-decoration: none;
+            color: #007BFF; /* Highlight link color */
+            font-weight: bold;
+        }
+
+        #file-list li a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Njala Environmental Technicians</h1>
+        <nav>
+            <ul>
+                <li><a href="Mission.html">Mission</a></li>
+                <li><a href="Offerings.html">Offerings</a></li>
+                <li><a href="Solutions.html">Solutions</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="Profile-Settings.html">Profile-Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <ul id="file-list">
+            <li><a href="TRADCO ESMP Doc for SUBMISSION (1).pdf" download>TRADCO ESMP Doc for SUBMISSION (1)</a></li>
+            <li><a href="BASELINE REPORT FOR RAINBOW PAINT( ATMOSPHERIC PRESSURE).docx" download>BASELINE REPORT FOR RAINBOW PAINT(ATMOSPHERIC PRESSURE)</a></li>
+            <li><a href="NSBT REPORT.docx" download>NSBT REPORT</a></li>
+            <li><a href="Quotation for OGFC Recent EMRs(for 2024 to 2025 session).pdf" download>Quotation for OGFC Recent EMRs (2024-2025)</a></li>
+            <li><a href="fmea FOR nmi.docx" download>FMEA for NMI</a></li>
+            <li><a href="Grievance Redress Report (rainbow).docx" download>Grievance Redress Report (Rainbow)</a></li>
+        </ul>
+    </main>
+</body>
+</html>

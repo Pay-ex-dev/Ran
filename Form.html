@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application Form</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: url('back.JPG') no-repeat center center fixed;
+      background-size: cover;
+      color: #ffffff;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+      width: 100%;
+    }
+    
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #f4f4f4;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    main {
+      max-width: 600px;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+      margin-top: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    label {
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #ffcc00;
+    }
+
+    input, textarea, button {
+      font-size: 1.1em;
+      padding: 12px;
+      border: 1px solid #cccccc;
+      border-radius: 8px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      outline: none;
+      background-color: #fff;
+      color: #333;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #ffcc00;
+      box-shadow: 0px 2px 8px rgba(255, 204, 0, 0.7);
+    }
+
+    button {
+      background-color: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      padding: 12px 20px;
+      width: auto;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    button:hover {
+      background-color: #ff9900;
+    }
+
+    textarea {
+      resize: none;
+      min-height: 120px;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #f4f4f4;
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Job Application Form</h1>
+    </header>
+    <form id="jobForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="email">Your Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="position">Position Applying For:</label>
+      <input type="text" id="position" name="position" placeholder="Enter the position name" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Write a message (optional)" rows="4"></textarea>
+
+      <button type="submit">Submit Application</button>
+    </form>
+    <footer>
+      <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('jobForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+
+      // Gather user input
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const position = document.getElementById('position').value;
+      const message = document.getElementById('message').value;
+
+      // Construct the mailto link
+      const mailtoLink = `mailto:dumbuyasahid821@gmail.com?subject=Job Application: ${encodeURIComponent(position)}&body=${encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nPosition: ${position}\nMessage: ${message}`
+      )}`;
+
+      // Redirect to the mailto link
+      window.location.href = mailtoLink;
+    });
+  </script>
+</body>
+</html>
